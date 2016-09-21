@@ -9,20 +9,21 @@ using System.Web.Mvc;
 
 namespace ScTraining.Controllers
 {
-    public class TrainingController : Controller
+    public class TrainingController : BaseController
     {
-        // GET: Home
-        public ActionResult Index()
+        public TrainingController(ISitecoreContext sitecoreContext) : base(sitecoreContext)
         {
-            var context = new SitecoreContext();
-            var model = context.GetHomeItem<Home>();
-            return PartialView("~/Views/Training/Index.cshtml", model);
+        }
+
+        public ActionResult Home()
+        {
+            var model = SitecoreContext.GetHomeItem<Home>();
+            return PartialView("~/Views/Training/Home.cshtml", model);
         }
 
         public ActionResult Carousel()
         {
-            var context = new SitecoreContext();
-            var model = context.GetItem<Carousel>(RenderingContext.Current.Rendering.DataSource);
+            var model = SitecoreContext.GetItem<Carousel>(RenderingContext.Current.Rendering.DataSource);
             return PartialView("~/Views/Training/Carousel.cshtml", model);
         }
     }
