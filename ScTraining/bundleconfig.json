@@ -1,0 +1,10 @@
+[
+  {
+    "outputFileName": "Assets/js/vendor.js",
+    "inputFiles": [
+      "Assets/js/jquery.js",
+      "Assets/js/bootstrap.js",
+      "Assets/js/owl.carousel.js"
+    ]
+  }
+]

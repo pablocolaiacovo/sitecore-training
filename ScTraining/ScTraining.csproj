@@ -124,7 +124,12 @@
     <Content Include="Assets\css\bootstrap-theme.min.css" />
     <Content Include="Assets\css\bootstrap.css" />
     <Content Include="Assets\css\bootstrap.min.css" />
+    <Content Include="Assets\css\owl.carousel.css" />
+    <Content Include="Assets\css\owl.theme.css" />
+    <Content Include="Assets\css\owl.transitions.css" />
     <Content Include="Assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\img\AjaxLoader.gif" />
+    <Content Include="Assets\img\grabbing.png" />
     <Content Include="Assets\js\bootstrap.js" />
     <Content Include="Assets\js\bootstrap.min.js" />
     <Content Include="Assets\js\core.js" />
@@ -133,6 +138,8 @@
     <Content Include="Assets\js\jquery.slim.js" />
     <Content Include="Assets\js\jquery.slim.min.js" />
     <Content Include="Assets\js\npm.js" />
+    <Content Include="Assets\js\owl.carousel.js" />
+    <Content Include="Assets\js\owl.carousel.min.js" />
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

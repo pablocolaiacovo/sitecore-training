@@ -20,7 +20,7 @@ namespace ScTraining.Controllers
 
         public ActionResult Carousel()
         {
-            return View();
+            return PartialView("~/Views/Training/Carousel.cshtml");
         }
     }
 }
