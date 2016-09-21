@@ -1,5 +1,6 @@
 ﻿using Glass.Mapper.Sc;
 using ScTraining.Models;
+using Sitecore.Mvc.Presentation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,9 @@ namespace ScTraining.Controllers
 
         public ActionResult Carousel()
         {
-            return PartialView("~/Views/Training/Carousel.cshtml");
+            var context = new SitecoreContext();
+            var model = context.GetItem<Carousel>(RenderingContext.Current.Rendering.DataSource);
+            return PartialView("~/Views/Training/Carousel.cshtml", model);
         }
     }
 }

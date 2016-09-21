@@ -137,15 +137,24 @@
     <Content Include="Assets\js\jquery.min.js" />
     <Content Include="Assets\js\jquery.slim.js" />
     <Content Include="Assets\js\jquery.slim.min.js" />
+    <Content Include="Assets\js\main.js" />
     <Content Include="Assets\js\npm.js" />
-    <Content Include="Assets\js\owl.carousel.js" />
+    <Content Include="Assets\js\owl.carousel.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Assets\js\owl.carousel.min.js" />
+    <Content Include="Assets\js\vendor.js" />
+    <Content Include="Assets\js\vendor.min.js">
+      <DependentUpon>vendor.js</DependentUpon>
+    </Content>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\GlassMapperSc.cs" />
     <Compile Include="App_Start\GlassMapperScCustom.cs" />
     <Compile Include="Controllers\TrainingController.cs" />
+    <Compile Include="Models\Article.cs" />
+    <Compile Include="Models\Carousel.cs" />
     <Compile Include="Models\Home.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -168,6 +177,7 @@
     <Content Include="App_Config\Include\Glass.Mapper.Sc.Start.config" />
     <Content Include="App_Config\Include\Glass.Mapper.Sc.config" />
     <Content Include="App_Config\Include\Glass.Mapper.Sc.CodeFirst.config.exclude" />
+    <None Include="bundleconfig.json" />
     <None Include="Properties\PublishProfiles\Sitecore Training.pubxml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Training\Index.cshtml" />
