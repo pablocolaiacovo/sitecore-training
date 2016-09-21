@@ -7,24 +7,21 @@ using System.Web;
 using System.Web.Mvc;
 using Glass.Mapper.Configuration;
 using Glass.Mapper.Pipelines.DataMapperResolver;
+using Castle.MicroKernel.Registration;
+using Castle.Windsor;
+using Castle.MicroKernel.SubSystems.Configuration;
 
 namespace ScTraining.App_Start
 {
-    //public class ControllersInstaller : IDataMapperResolverTask, IWindsorInstaller
-    //{
-    //    public void Execute(DataMapperResolverArgs args)
-    //    {
-
-    //    }
-
-    //    public void Install(IWindsorContainer container, IConfigurationStore store)
-    //    {
-    //        //container.Register(Classes.FromThisAssembly().BasedOn<IController>().LifestyleTransient());
-    //        container.Register(
-    //            Component.For<ISitecoreContext>().ImplementedBy<SitecoreContext>().LifestyleTransient(),
-    //            Component.For<ISitecoreService>().ImplementedBy<SitecoreService>().LifestyleTransient()
-    //                .DependsOn(Dependency.OnValue("databaseName", "master"))
-    //        );
-    //    }
-    //}
+    public class ControllersInstaller : IWindsorInstaller
+    { 
+        public void Install(IWindsorContainer container, IConfigurationStore store)
+        {
+            container.Register(
+                Component.For<ISitecoreContext>().ImplementedBy<SitecoreContext>().LifestyleTransient(),
+                Component.For<ISitecoreService>().ImplementedBy<SitecoreService>().LifestyleTransient()
+                    .DependsOn(Dependency.OnValue("databaseName", "master"))
+            );
+        }
+    }
 }

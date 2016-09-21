@@ -14,8 +14,10 @@ namespace ScTraining
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            var container = new UnityContainer();
-            UnityConfig.RegisterTypes(container);
+            //var container = new UnityContainer();
+            //UnityConfig.RegisterTypes(container);
+            var container = new Castle.Windsor.WindsorContainer();
+            container.Install(new ControllersInstaller());
         }
 
         protected void Session_Start(object sender, EventArgs e)
