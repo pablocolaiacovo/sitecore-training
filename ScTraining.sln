@@ -5,6 +5,13 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScTraining", "ScTraining\ScTraining.csproj", "{223CDD7D-8F1F-4039-AB49-CC1CCC92A6A5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependencies", "Dependencies", "{212D85BF-9B40-463B-A0D7-02649F30EC39}"
+	ProjectSection(SolutionItems) = preProject
+		Dependencies\Sitecore.Kernel.dll = Dependencies\Sitecore.Kernel.dll
+		Dependencies\Sitecore.Logging.dll = Dependencies\Sitecore.Logging.dll
+		Dependencies\Sitecore.Mvc.dll = Dependencies\Sitecore.Mvc.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
